@@ -1,0 +1,15 @@
+.header {
+  font-size: 1.6rem;
+  height: 7rem;
+  background-color: var(--color-white);
+  border-bottom: var(--color-gray-light-2);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    height: 5rem;
+    margin-left: 3rem;
+  }
+}
