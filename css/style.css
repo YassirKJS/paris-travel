@@ -448,7 +448,7 @@ ORDER:  Base + Typography + General Layout + Grid > Page Layout > Componenets
 
 .legal {
   font-size: 1.2rem;
-  color: var(--color-gray-light-4);
+  color: var(--color-gray-light-1);
   text-align: center;
   padding: 2.5rem; }
 
@@ -469,12 +469,52 @@ ORDER:  Base + Typography + General Layout + Grid > Page Layout > Componenets
   border-bottom: var(--line); }
 
 .description {
-  background-color: cyan;
+  background-color: white;
   font-size: 1.4rem;
   box-shadow: var(--shadow-light);
   padding: 3rem;
   flex: 0 0 60%;
-  margin-right: 4.5rem; }
+  margin-right: 4.5rem;
+  color: var(--color-gray-dark-3); }
+  .description .paragraph:not(:last-of-type) {
+    margin-bottom: 2rem; }
+  .description .list {
+    list-style: none;
+    margin: 3rem 0;
+    padding: 3rem 0;
+    border-top: var(--line);
+    border-bottom: var(--line);
+    display: flex;
+    flex-wrap: wrap; }
+    .description .list__item {
+      flex: 0 0 50%;
+      margin-bottom: .7rem; }
+    .description .list__item::before {
+      content: "";
+      display: inline-block;
+      height: 2rem;
+      width: 2rem;
+      margin-right: .7rem;
+      background-color: var(--color-primary);
+      --webkit-mask-image: url("../../img/chevron-thin-right.svg");
+      --webkit-mask-size: cover;
+      mask-image: url("../../img/chevron-thin-right.svg");
+      mask-size: cover; }
+  .description .recommend {
+    font-size: 1.3rem;
+    color: var(--color-gray-dark-2);
+    display: flex;
+    align-items: center; }
+    .description .recommend__count {
+      margin-right: auto; }
+    .description .recommend__photo {
+      box-sizing: content-box;
+      height: 4rem;
+      width: 4rem;
+      border-radius: 50%;
+      border: .3rem solid #fff; }
+      .description .recommend__photo:not(:last-child) {
+        margin-right: -1.5rem; }
 
 .user-reviews {
   background-color: #7ed56f;
