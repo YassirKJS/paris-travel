@@ -42,9 +42,15 @@
   --color-gray-light-3: #f0eeee;
   --color-gray-light-4: #ccc;
 
+  //SHADOW BOX
+  --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
+  --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
 
   // FONT
   --default-font-size: 1.6rem;
+
+  //BORDER
+  --line: 1px solid var(--color-gray-light-2);
 
   // GRID
   --grid_width: 114rem;
