@@ -342,6 +342,19 @@ ORDER:  Base + Typography + General Layout + Grid > Page Layout > Componenets
   fill: currentColor;
   margin-right: 1.5rem; }
 
+.overview {
+  display: flex;
+  justify-content: space-between; }
+
+.overview__stars {
+  margin-right: auto; }
+
+.overview__icon-star,
+.overview__icon-location {
+  width: 1.75rem;
+  height: 1.75rem;
+  fill: var(--color-primary); }
+
 .content {
   display: flex; }
 
@@ -372,6 +385,12 @@ ORDER:  Base + Typography + General Layout + Grid > Page Layout > Componenets
   padding: 2.5rem; }
 
 .view {
-  background-color: lime;
+  background-color: white;
   height: 80rem;
   flex: 1; }
+
+.gallery {
+  display: flex; }
+  .gallery__photo {
+    width: 100%;
+    display: block; }
