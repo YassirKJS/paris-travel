@@ -306,13 +306,25 @@ ORDER:  Base + Typography + General Layout + Grid > Page Layout > Componenets
   margin-top: 3.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; }
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden; }
+  @media (max-width: 56.25em) {
+    .side-nav {
+      flex-direction: row;
+      margin: 0; } }
 
 .side-nav__item {
   position: relative;
   padding: 0 8% 0 6%; }
   .side-nav__item:not(:last-child) {
     margin-bottom: .5rem; }
+    @media (max-width: 56.25em) {
+      .side-nav__item:not(:last-child) {
+        margin: 0; } }
+  @media (max-width: 56.25em) {
+    .side-nav__item {
+      flex: 1; } }
 
 .side-nav__item::before {
   content: "";
@@ -323,12 +335,24 @@ ORDER:  Base + Typography + General Layout + Grid > Page Layout > Componenets
   width: 3px;
   background-color: var(--color-primary);
   transform: scaleY(0);
-  transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.1s, background-color 0.1s; }
+  transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.1s, background-color 0.1s;
+  overflow: hidden; }
+  @media (max-width: 56.25em) {
+    .side-nav__item::before {
+      height: 3px;
+      width: 100%;
+      transform: scaleY(1) scaleX(0);
+      transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.1s, background-color 0.1s; } }
 
 .side-nav__item:hover::before,
 .side-nav__item--active::before {
-  transform: scaleY(1);
+  transform: scaleY(1) scaleX(1.2);
   width: 100%; }
+  @media (max-width: 56.25em) {
+    .side-nav__item:hover::before,
+    .side-nav__item--active::before {
+      transform: scaleY(1.4) scaleX(1);
+      height: 100%; } }
 
 .side-nav__item:active::before {
   background-color: var(--color-primary-light); }
@@ -347,6 +371,11 @@ ORDER:  Base + Typography + General Layout + Grid > Page Layout > Componenets
   z-index: 10;
   display: flex;
   align-items: center; }
+  @media (max-width: 56.25em) {
+    .side-nav__link:link,
+    .side-nav__link:visited {
+      justify-content: center;
+      padding: 2rem; } }
 
 .side-nav__link:hover {
   font-weight: 600; }
@@ -510,8 +539,26 @@ ORDER:  Base + Typography + General Layout + Grid > Page Layout > Componenets
     .cta .btn:focus {
       outline: none; }
 
+.container {
+  max-width: 120rem;
+  margin: 8rem auto;
+  background-color: var(--color-gray-light-1);
+  box-shadow: var(--shadow-dark);
+  min-height: 50rem;
+  /*
+  @media only screen and (max-width: $bp-largest) {
+    margin: 0;
+  }
+  */ }
+  @media (max-width: 75em) {
+    .container {
+      margin: 0; } }
+
 .content {
   display: flex; }
+  @media (max-width: 56.25em) {
+    .content {
+      flex-direction: column; } }
 
 .header {
   font-size: 1.6rem;
@@ -538,6 +585,9 @@ ORDER:  Base + Typography + General Layout + Grid > Page Layout > Componenets
   color: var(--color-gray-light-1);
   text-align: center;
   padding: 2.5rem; }
+  @media (max-width: 56.25em) {
+    .legal {
+      display: none; } }
 
 .view {
   background-color: white;
@@ -555,6 +605,9 @@ ORDER:  Base + Typography + General Layout + Grid > Page Layout > Componenets
   background-color: var(--color-gray-light-1);
   border-bottom: var(--line);
   font-size: 1.4rem; }
+  @media (max-width: 56.25em) {
+    .detail {
+      padding: 3rem; } }
 
 .description {
   background-color: white;
@@ -564,6 +617,10 @@ ORDER:  Base + Typography + General Layout + Grid > Page Layout > Componenets
   flex: 0 0 60%;
   margin-right: 4.5rem;
   color: var(--color-gray-dark-3); }
+  @media (max-width: 56.25em) {
+    .description {
+      padding: 2rem;
+      margin-right: 3rem; } }
   .description .paragraph:not(:last-of-type) {
     margin-bottom: 2rem; }
   .description .list {
@@ -602,7 +659,7 @@ ORDER:  Base + Typography + General Layout + Grid > Page Layout > Componenets
       border-radius: 50%;
       border: .3rem solid #fff; }
       .description .recommend__photo:not(:last-child) {
-        margin-right: -1.5rem; }
+        margin-right: -2rem; }
 
 .user-reviews {
   flex: 1;

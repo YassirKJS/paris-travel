@@ -4,6 +4,10 @@
   background-color: var(--color-gray-light-1);
   border-bottom: var(--line);
   font-size: 1.4rem;
+
+  @include respond(tab-port) {
+    padding: 3rem;
+  }
 }
 
 .description {
@@ -14,6 +18,11 @@
   flex: 0 0 60%;
   margin-right: 4.5rem;
   color: var(--color-gray-dark-3);
+
+  @include respond(tab-port) {
+    padding: 2rem;
+    margin-right: 3rem;
+  }
 
   .paragraph:not(:last-of-type) {
     margin-bottom: 2rem;
@@ -77,7 +86,7 @@
       border: .3rem solid #fff;
 
       &:not(:last-child) {
-        margin-right: -1.5rem;
+        margin-right: -2rem
       }
     }
   }
