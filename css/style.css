@@ -463,6 +463,10 @@ ORDER:  Base + Typography + General Layout + Grid > Page Layout > Componenets
   margin-bottom: 3.5rem;
   position: relative;
   overflow: hidden; }
+  @media (max-width: 56.25em) {
+    .review {
+      padding: 2rem;
+      margin-bottom: 3rem; } }
   .review__text {
     margin-bottom: 2rem;
     z-index: 10;
@@ -502,6 +506,9 @@ ORDER:  Base + Typography + General Layout + Grid > Page Layout > Componenets
 .cta {
   padding: 3.5rem 0;
   text-align: center; }
+  @media (max-width: 56.25em) {
+    .cta {
+      padding: 2.5rem 0; } }
   .cta__book-now {
     font-size: 2rem;
     font-weight: 300;
@@ -651,7 +658,9 @@ ORDER:  Base + Typography + General Layout + Grid > Page Layout > Componenets
     display: flex;
     align-items: center; }
     .description .recommend__count {
-      margin-right: auto; }
+      margin-right: 2rem; }
+    .description .recommend__friends {
+      display: flex; }
     .description .recommend__photo {
       box-sizing: content-box;
       height: 4rem;
