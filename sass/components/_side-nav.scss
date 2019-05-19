@@ -17,7 +17,7 @@
 
 .side-nav__item {
   position: relative;
-  padding: 0 8% 0 6%;
+  //padding: 0 8% 0 6%;
 
   &:not(:last-child) {
     margin-bottom: .5rem;
@@ -93,6 +93,11 @@
     justify-content: center;
     padding: 2rem;
   }
+
+  @include respond(phone) {
+    flex-direction: column;
+    padding: 1.5rem .5rem;
+  }
 }
 
 .side-nav__link:hover {
@@ -105,6 +110,13 @@
   width: 1.75rem;
   fill : currentColor;
   margin-right: 1.5rem;
+
+  @include respond(phone) {
+    margin-right: 0;
+    margin-bottom: .7rem;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 }
 
 

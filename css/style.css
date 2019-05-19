@@ -229,7 +229,13 @@ ORDER:  Base + Typography + General Layout + Grid > Page Layout > Componenets
   flex: 0 0 40%;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  border-radius: 10px; }
+  @media (max-width: 56.25em) {
+    .search {
+      order: 1;
+      background-color: var(--color-gray-light-2);
+      margin-right: 2rem; } }
   .search__input {
     font-family: inherit;
     font-size: inherit;
@@ -315,8 +321,7 @@ ORDER:  Base + Typography + General Layout + Grid > Page Layout > Componenets
       margin: 0; } }
 
 .side-nav__item {
-  position: relative;
-  padding: 0 8% 0 6%; }
+  position: relative; }
   .side-nav__item:not(:last-child) {
     margin-bottom: .5rem; }
     @media (max-width: 56.25em) {
@@ -376,6 +381,11 @@ ORDER:  Base + Typography + General Layout + Grid > Page Layout > Componenets
     .side-nav__link:visited {
       justify-content: center;
       padding: 2rem; } }
+  @media (max-width: 37.5em) {
+    .side-nav__link:link,
+    .side-nav__link:visited {
+      flex-direction: column;
+      padding: 1.5rem .5rem; } }
 
 .side-nav__link:hover {
   font-weight: 600; }
@@ -385,6 +395,12 @@ ORDER:  Base + Typography + General Layout + Grid > Page Layout > Componenets
   width: 1.75rem;
   fill: currentColor;
   margin-right: 1.5rem; }
+  @media (max-width: 37.5em) {
+    .side-nav__icon {
+      margin-right: 0;
+      margin-bottom: .7rem;
+      width: 1.5rem;
+      height: 1.5rem; } }
 
 .overview {
   display: flex;
@@ -397,6 +413,10 @@ ORDER:  Base + Typography + General Layout + Grid > Page Layout > Componenets
   text-transform: uppercase;
   letter-spacing: 1px;
   padding: 1.5rem 3rem; }
+  @media (max-width: 37.5em) {
+    .overview__heading {
+      font-size: 1.8rem;
+      padding: 1.25rem 2rem; } }
 
 .overview__stars {
   margin-right: auto;
@@ -426,15 +446,24 @@ ORDER:  Base + Typography + General Layout + Grid > Page Layout > Componenets
   flex-direction: column;
   align-items: center;
   justify-content: center; }
+  @media (max-width: 37.5em) {
+    .overview__rating {
+      padding: 0 1.5rem; } }
 
 .overview__rating-average {
   font-size: 2.25rem;
   font-weight: 300;
   margin-bottom: -3px; }
+  @media (max-width: 37.5em) {
+    .overview__rating-average {
+      font-size: 1.8rem; } }
 
 .overview__rating-count {
   font-size: 1rem;
   text-transform: uppercase; }
+  @media (max-width: 37.5em) {
+    .overview__rating-count {
+      font-size: .7rem; } }
 
 .btn-inline {
   border: none;
@@ -574,17 +603,24 @@ ORDER:  Base + Typography + General Layout + Grid > Page Layout > Componenets
   border-bottom: 1px solid var(--color-gray-light-2);
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  /*@include respond(tab-port) {
+    flex-wrap: wrap;
+    align-content: space-around;
+    height: 12rem;
+  }*/ }
   .header__logo {
     height: 5rem;
     margin-left: 2rem; }
+    @media (max-width: 56.25em) {
+      .header__logo {
+        height: 4rem; } }
 
 .sidebar {
   background-color: var(--color-gray-dark-3);
   flex: 0 0 17%;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
   justify-content: space-between; }
 
 .legal {
@@ -615,6 +651,9 @@ ORDER:  Base + Typography + General Layout + Grid > Page Layout > Componenets
   @media (max-width: 56.25em) {
     .detail {
       padding: 3rem; } }
+  @media (max-width: 37.5em) {
+    .detail {
+      flex-direction: column; } }
 
 .description {
   background-color: white;
@@ -628,6 +667,10 @@ ORDER:  Base + Typography + General Layout + Grid > Page Layout > Componenets
     .description {
       padding: 2rem;
       margin-right: 3rem; } }
+  @media (max-width: 37.5em) {
+    .description {
+      margin-right: 0;
+      margin-bottom: 3rem; } }
   .description .paragraph:not(:last-of-type) {
     margin-bottom: 2rem; }
   .description .list {
